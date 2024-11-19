@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Pagos - EducaOnline</title>
+    <link rel="stylesheet" href="../Estilos/pagosPortal.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="../index.html" class="navbar-link">← Regresar a la Página Principal</a>
+    </nav>
+
+    <div class="container">
+        <h2>Portal de Pagos</h2>
+
+        <div class="summary">
+            <h3>Resumen de la Membresía Seleccionada</h3>
+            <p id="membershipSummary">Cargando información de membresía...</p>
+        </div>
+
+        <form class="payment-form" id="paymentForm">
+            <label for="name">Nombre Completo:</label>
+            <input type="text" id="name" placeholder="Ingresa tu nombre completo" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" placeholder="Ingresa tu correo electrónico" required>
+
+            <label for="cardNumber">Número de Tarjeta:</label>
+            <input type="text" id="cardNumber" placeholder="Ingresa tu número de tarjeta" required>
+
+            <label for="expiryDate">Fecha de Expiración:</label>
+            <input type="text" id="expiryDate" placeholder="MM/AA" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" placeholder="Código de seguridad" required>
+
+            <div class="button-container">
+                <button type="button" class="btn btn-pay" onclick="processPayment()">Realizar Pago</button>
+                <button type="button" class="btn btn-cancel" onclick="cancelPayment()">Cancelar</button>
+            </div>
+        </form>
+
+        <p id="paymentMessage"></p>
+    </div>
+
+    <script>
+        // Función para mostrar la información de la membresía
+        function displayMembershipInfo() {
+            const membershipType = localStorage.getItem('selectedMembership');
+            const membershipPrice = localStorage.getItem('membershipPrice');
+
+            if (membershipType && membershipPrice) {
+                document.getElementById("membershipSummary").innerHTML = `
+                    Has seleccionado la <strong>${membershipType}</strong> con un precio de <strong>$${membershipPrice}/mes</strong>.
+                `;
+            } else {
+                document.getElementById("membershipSummary").innerText = "No se encontró información de membresía.";
+            }
+        }
+
+        // Función para procesar el pago
+        function processPayment() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            // Mostrar mensaje de éxito y redirigir
+            if (name && email) {
+                document.getElementById('paymentMessage').innerText = "Pago exitoso. Redirigiendo al inicio de sesión...";
+                setTimeout(() => {
+                    window.location.href = 'login.html'; // Redirige a la página de inicio de sesión
+                }, 2000);
+            } else {
+                document.getElementById('paymentMessage').innerText = "Por favor, completa todos los campos.";
+            }
+        }
+
+        // Función para cancelar el pago y redirigir al inicio
+        function cancelPayment() {
+            window.location.href = '../index.html'; // Redirige a la página principal
+        }
+
+        // Mostrar la información de la membresía al cargar la página
+        window.onload = displayMembershipInfo;
+    </script>
+</body>
+</html>

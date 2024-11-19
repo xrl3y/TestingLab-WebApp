@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #fff;
+}
+
+/* Menu */
+nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background: #fff;
+    width: 90px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure the menu is above other elements */
+}
+
+nav:hover {
+    width: 280px;
+    transition: all 0.5s ease;
+}
+
+.logo {
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 10px 0 0 10px;
+}
+
+.logo span {
+    font-weight: bold;
+    padding: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+a {
+    position: relative;
+    color: rgb(85, 83, 83);
+    font-size: 14px;
+    display: inline-block; /* Change table to inline-block for better alignment */
+    width: auto; /* Adjust the width to fit the content */
+    padding: 10px;
+}
+
+.fas {
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+}
+
+.nav-item {
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+}
+
+a:hover {
+    background: #eee;
+}
+
+.logout {
+    position: absolute;
+    bottom: 0;
+}
+
+/* Centrar tabla en la página */
+.row {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    justify-content: flex-start; /* Alinea los elementos en la parte superior */
+    align-items: center;
+    width: calc(100% - 90px); /* Ajustar según el tamaño del menú */
+    margin-left: 90px; /* Evita que el contenido colapse con el menú */
+    padding-top: 30px; /* Añade un margen superior para evitar solapamiento con el header */
+}
+
+/* Contenedor de mensajes */
+.message-container {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Mensaje de éxito */
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Mensaje de error */
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.table-container {
+    display: flex;
+    justify-content: column; /* Centra la tabla */
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilos para una tabla más plana */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 0.9em; /* Reduce un poco el tamaño de la fuente */
+    min-width: 400px;
+}
+
+table th, table td {
+    padding: 4px 10px; /* Reduce el padding para hacer las celdas más planas */
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table thead th {
+    background-color: #fff;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #fff;
+}
+
+/* Ajustar botones y alineación de las imágenes */
+td a {
+    display: inline-block;
+    margin-right: 1px;
+    vertical-align: middle;
+}
+
+td img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.pagination {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 5px;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+.pagination a.active {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Contenedor del botón 'Crear' */
+.table-header {
+    display: flex;
+    justify-content: flex-start; /* Alinea el botón a la izquierda */
+    width: 80%; /* Para que coincida con el ancho de la tabla */
+    margin: 0 auto 10px; /* Centra horizontalmente el contenedor en la página */
+}
+
+/* Estilo del botón 'Crear' */
+.btn-primary {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,251 @@
+/* Estilos generales de la página */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+.header {
+    background-color: #37B7C3;
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+}
+
+.header .navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.header .navigation ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.header .navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+.header .navigation a:hover {
+    text-decoration: underline;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+/* Barra Lateral */ 
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, #dbe7e9 0%, #b7e2e4 100%); /* Degradado de color */
+    border-radius: 10px;
+    padding: 20px; /* Aumentar el padding */
+    margin-right: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+    transition: background 0.3s; /* Transición suave al cambiar el fondo */
+}
+
+.sidebar:hover {
+    background: linear-gradient(135deg, #c0e0e2 0%, #a3d3d7 100%); /* Cambio de color en hover */
+}
+
+.sidebar h3 {
+    font-size: 24px;
+    color: #123e47;
+    margin-bottom: 20px; /* Espacio adicional */
+    border-bottom: 2px solid #255358; /* Línea debajo del título */
+    padding-bottom: 10px; /* Espacio entre el título y la línea */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0; /* Espacio entre los elementos de la lista */
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #255358;
+    font-weight: bold; /* Negrita para mejorar la legibilidad */
+    padding: 10px; /* Espaciado interno para los enlaces */
+    border-radius: 5px; /* Bordes redondeados */
+    display: block; /* Hacer que el área del enlace sea más grande */
+    transition: background 0.3s, color 0.3s; /* Transiciones suaves */
+}
+
+.sidebar a:hover {
+    background-color: rgba(37, 83, 88, 0.2); /* Fondo suave en hover */
+    color: #123e47; /* Cambiar color del texto en hover */
+}
+
+.sidebar ul ul {
+    padding-left: 15px; /* Espaciado para los submenús */
+}
+
+.sidebar ul ul li {
+    margin: 5px 0; /* Espacio reducido para los submenús */
+}
+
+
+/* Contenido Principal */
+.main-content {
+    padding: 40px 20px;
+}
+
+/* Contenedor de Video */
+.video-container {
+    background-color: #ffffff; /* Fondo blanco para el contenedor del video */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 30px; /* Espaciado inferior */
+    width: 100%; /* Aseguramos que el contenedor use el ancho completo */
+}
+
+/* Estilos para el video */
+.video-container video {
+    border-radius: 10px; /* Bordes redondeados para el video */
+    width: 100%; /* Ancho completo del contenedor */
+    height: auto; /* Mantiene la proporción del video */
+}
+
+/* Descripción del Video */
+.video-description {
+    margin-top: 15px; /* Espaciado superior */
+}
+
+.video-description h3 {
+    font-size: 24px; /* Tamaño de fuente para el título */
+    color: #2c3e50; /* Color del texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.video-description p {
+    font-size: 16px; /* Tamaño de fuente para el párrafo */
+    line-height: 1.5; /* Espaciado entre líneas */
+    color: #555; /* Color del texto */
+}
+
+/* Syllabus del Curso */
+#syllabus {
+    background-color: #e9ecef; /* Fondo gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 30px; /* Espaciado inferior */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+#syllabus h3 {
+    font-size: 24px; /* Tamaño de fuente para el título del syllabus */
+    color: #123e47; /* Color del texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+#syllabus p {
+    font-size: 16px; /* Tamaño de fuente para el párrafo */
+    line-height: 1.5; /* Espaciado entre líneas */
+    color: #555; /* Color del texto */
+}
+
+#syllabus ul {
+    padding-left: 20px; /* Espaciado izquierdo para la lista */
+}
+
+#syllabus li {
+    margin-bottom: 5px; /* Espaciado inferior entre elementos de la lista */
+}
+
+/* Material Adicional */
+#additional-material {
+    background-color: #e9ecef; /* Fondo gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 30px; /* Espaciado inferior */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+#additional-material h3 {
+    font-size: 24px; /* Tamaño de fuente para el título del material adicional */
+    color: #123e47; /* Color del texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+#additional-material p {
+    font-size: 16px; /* Tamaño de fuente para el párrafo */
+    line-height: 1.5; /* Espaciado entre líneas */
+    color: #555; /* Color del texto */
+}
+
+#additional-material ul {
+    padding-left: 20px; /* Espaciado izquierdo para la lista */
+}
+
+#additional-material li {
+    margin-bottom: 5px; /* Espaciado inferior entre elementos de la lista */
+}
+
+/* Nombre del Profesor */
+#professor {
+    background-color: #e9ecef; /* Fondo gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 30px; /* Espaciado inferior */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+#professor h3 {
+    font-size: 24px; /* Tamaño de fuente para el título del profesor */
+    color: #123e47; /* Color del texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+#professor p {
+    font-size: 16px; /* Tamaño de fuente para el párrafo */
+    line-height: 1.5; /* Espaciado entre líneas */
+    color: #555; /* Color del texto */
+}
+
+/* Preguntas Frecuentes */
+#faq {
+    background-color: #e9ecef; /* Fondo gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 30px; /* Espaciado inferior */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+#faq h3 {
+    font-size: 24px; /* Tamaño de fuente para el título de FAQ */
+    color: #123e47; /* Color del texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+#faq p {
+    font-size: 16px; /* Tamaño de fuente para el párrafo */
+    line-height: 1.5; /* Espaciado entre líneas */
+    color: #555; /* Color del texto */
+}
+
+#faq ul {
+    padding-left: 20px; /* Espaciado izquierdo para la lista */
+}
+
+#faq li {
+    margin-bottom: 5px; /* Espaciado inferior entre elementos de la lista */
+}
+
+

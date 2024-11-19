@@ -1,0 +1,146 @@
+/*------------------------------------ PAGOS.CSS----------------------------------*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Color de fondo más suave */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar-link:hover {
+    color: #e0e0e0;
+}
+
+/*------------------------------------ ELEGIR MEMBRESIA  ----------------------------------*/
+
+.membership-selection {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.membership-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.membership-card {
+    background-color: #e7f0ff; /* Fondo claro para tarjetas */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 30%; /* Ajusta el ancho de las tarjetas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Animación suave */
+}
+
+.membership-card:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta al pasar el mouse */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+h2 {
+    color: #008080; /* Color cian verdoso */
+}
+
+.price {
+    font-size: 24px;
+    color: #008080; /* Color cian verdoso */
+    font-weight: bold;
+}
+
+button {
+    background-color: #008080; /* Color cian verdoso */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #006d6d; /* Tono más oscuro de cian verdoso */
+    transform: scale(1.05); /* Agranda el botón al pasar el mouse */
+}
+
+.selected-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+
+/*------------------------------------ SECCION DE RESUMEN DE PAGOS   ----------------------------------*/
+
+.membership-summary {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ffffff; /* Color de fondo blanco para contrastar */
+    border: 1px solid #007bff; /* Borde azul */
+    border-radius: 10px; /* Bordes más redondeados */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+    text-align: center; /* Centramos el texto */
+    transition: transform 0.3s; /* Animación suave */
+}
+
+.membership-summary:hover {
+    transform: scale(1.02); /* Agranda la sección al pasar el mouse */
+}
+
+.membership-summary h3 {
+    color: #007bff; /* Color del encabezado */
+    font-size: 24px; /* Tamaño de fuente mayor */
+    margin-bottom: 15px; /* Espacio debajo del encabezado */
+    border-bottom: 2px solid #007bff; /* Línea debajo del encabezado */
+    padding-bottom: 10px; /* Relleno inferior */
+}
+
+.membership-summary p {
+    font-size: 18px; /* Tamaño de texto */
+    color: #555; /* Color de texto gris */
+    margin: 10px 0; /* Margen vertical */
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+.membership-summary strong {
+    color: #007bff; /* Color para los textos resaltados */
+}
+
+.membership-summary button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 12px 20px; /* Relleno del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    font-size: 16px; /* Tamaño de fuente del botón */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave */
+}
+
+.membership-summary button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+    transform: translateY(-2px); /* Eleva el botón al pasar el mouse */
+}

@@ -1,0 +1,249 @@
+/* Estilos generales de la página */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff3e0; /* Color de fondo suave */
+}
+
+/* Header */
+.header {
+    background-color: #ff9800; /* Color vibrante para el encabezado */
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+}
+
+.header .navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.header .navigation ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.header .navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+.header .navigation a:hover {
+    text-decoration: underline;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+/* Barra Lateral */ 
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, #ffe0b2 0%, #ffcc80 100%); /* Degradado suave */
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+.sidebar:hover {
+    background: linear-gradient(135deg, #ffcc80 0%, #ffb74d 100%); /* Cambio de color en hover */
+}
+
+.sidebar h3 {
+    font-size: 24px;
+    color: #e65100; /* Color más oscuro para el título */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ff9800; /* Línea debajo del título */
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #e65100;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255, 152, 0, 0.2); /* Fondo suave en hover */
+    color: #bf360c; /* Cambiar color del texto en hover */
+}
+
+.sidebar ul ul {
+    padding-left: 15px;
+}
+
+.sidebar ul ul li {
+    margin: 5px 0;
+}
+
+/* Contenido Principal */
+.main-content {
+    padding: 40px 20px;
+}
+
+/* Contenedor de Video */
+.video-container {
+    background-color: #ffffff; /* Fondo blanco para el contenedor del video */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/* Estilos para el video */
+.video-container video {
+    border-radius: 10px; 
+    width: 100%;
+    height: auto; 
+}
+
+/* Descripción del Video */
+.video-description {
+    margin-top: 15px; 
+}
+
+.video-description h3 {
+    font-size: 24px; 
+    color: #bf360c; /* Color del texto */
+    margin-bottom: 10px; 
+}
+
+.video-description p {
+    font-size: 16px; 
+    line-height: 1.5; 
+    color: #555; 
+}
+
+/* Syllabus del Curso */
+#syllabus {
+    background-color: #fff3e0; /* Fondo gris claro */
+    border-radius: 10px; 
+    padding: 20px; 
+    margin-bottom: 30px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#syllabus h3 {
+    font-size: 24px; 
+    color: #e65100; 
+    margin-bottom: 10px; 
+}
+
+#syllabus p {
+    font-size: 16px; 
+    line-height: 1.5; 
+    color: #555; 
+}
+
+#syllabus ul {
+    padding-left: 20px; 
+}
+
+#syllabus li {
+    margin-bottom: 5px; 
+}
+
+/* Material Adicional */
+#additional-material {
+    background-color: #fff3e0; 
+    border-radius: 10px; 
+    padding: 20px; 
+    margin-bottom: 30px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#additional-material h3 {
+    font-size: 24px; 
+    color: #e65100; 
+    margin-bottom: 10px; 
+}
+
+#additional-material p {
+    font-size: 16px; 
+    line-height: 1.5; 
+    color: #555; 
+}
+
+#additional-material ul {
+    padding-left: 20px; 
+}
+
+#additional-material li {
+    margin-bottom: 5px; 
+}
+
+/* Nombre del Profesor */
+#professor {
+    background-color: #fff3e0; 
+    border-radius: 10px; 
+    padding: 20px; 
+    margin-bottom: 30px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#professor h3 {
+    font-size: 24px; 
+    color: #e65100; 
+    margin-bottom: 10px; 
+}
+
+#professor p {
+    font-size: 16px; 
+    line-height: 1.5; 
+    color: #555; 
+}
+
+/* Preguntas Frecuentes */
+#faq {
+    background-color: #fff3e0; 
+    border-radius: 10px; 
+    padding: 20px; 
+    margin-bottom: 30px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#faq h3 {
+    font-size: 24px; 
+    color: #e65100; 
+    margin-bottom: 10px; 
+}
+
+#faq p {
+    font-size: 16px; 
+    line-height: 1.5; 
+    color: #555; 
+}
+
+#faq ul {
+    padding-left: 20px; 
+}
+
+#faq li {
+    margin-bottom: 5px; 
+}

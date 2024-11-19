@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccionar Membresía - EducaOnline</title>
+    <link rel="stylesheet" href="../Estilos/pagos.css"> <!-- Asegúrate de que el archivo CSS esté correcto -->
+</head>
+<body>
+
+    <!-- Barra de navegación para regresar a la página principal -->
+    <nav class="navbar">
+        <a href="../index.html" class="navbar-link">← Regresar a la Página Principal</a>
+    </nav>
+
+    <section class="membership-selection">
+        <a href="../index.html">
+            <img class="img1" src="../Imagenes/cc649ed0-1ced-4788-aa96-0be1084cc928.jpg" width="100" />
+        </a>
+        <h2>Selecciona tu Membresía</h2>
+        <p>Elige la membresía que mejor se adapte a tus necesidades y disfruta de todos nuestros cursos y recursos exclusivos.</p>
+    
+        <div class="membership-cards">
+            <!-- Membresía Básica -->
+            <div class="membership-card">
+                <h3>Membresía Básica</h3>
+                <p class="price">$9.99/mes</p>
+                <ul>
+                    <li>• Acceso a cursos básicos</li>
+                    <li>• Soporte técnico limitado</li>
+                    <li>• Acceso a foros de discusión</li>
+                </ul>
+                <button onclick="selectMembership('Básica', 9.99, 'Acceso a cursos básicos, soporte técnico limitado, y acceso a foros de discusión')">Seleccionar</button>
+            </div>
+    
+            <!-- Membresía Premium -->
+            <div class="membership-card">
+                <h3>Membresía Premium</h3>
+                <p class="price">$19.99/mes</p>
+                <ul>
+                    <li>• Acceso a todos los cursos</li>
+                    <li>• Soporte técnico prioritario</li>
+                    <li>• Acceso a materiales de estudio avanzados</li>
+                    <li>• Certificados de finalización</li>
+                </ul>
+                <button onclick="selectMembership('Premium', 19.99, 'Acceso a todos los cursos, soporte técnico prioritario, acceso a materiales de estudio avanzados y certificados de finalización')">Seleccionar</button>
+            </div>
+    
+            <!-- Membresía Corporativa -->
+            <div class="membership-card">
+                <h3>Membresía Corporativa</h3>
+                <p class="price">$49.99/mes</p>
+                <ul>
+                    <li>• Acceso a todos los cursos y seminarios en vivo</li>
+                    <li>• Soporte técnico 24/7</li>
+                    <li>• Acceso a todos los materiales exclusivos</li>
+                    <li>• Consultoría personalizada</li>
+                    <li>• Certificados de finalización y credenciales especiales</li>
+                </ul>
+                <button onclick="selectMembership('Corporativa', 49.99, 'Acceso a todos los cursos y seminarios en vivo, soporte técnico 24/7, acceso a materiales exclusivos, consultoría personalizada y certificados de finalización')">Seleccionar</button>
+            </div>
+        </div>
+    
+        <p id="selectedMembership" class="selected-message"></p>
+    </section>
+    
+    <script>
+        function selectMembership(membershipType, price, details) {
+            document.getElementById("selectedMembership").innerText = "Has seleccionado la membresía: " + membershipType + " - Precio: $" + price.toFixed(2);
+            // Guardar la membresía seleccionada en el almacenamiento local
+            localStorage.setItem('selectedMembership', membershipType);
+            localStorage.setItem('membershipPrice', price);
+            // Redirigir a la página de pagos
+            window.location.href = 'pagos.html';
+        }
+    </script>
+    
+    <section class="membership-summary">
+        <h3>Resumen de tu Membresía</h3>
+        <p id="summaryMessage">Seleccione una membresía para ver el resumen aquí.</p>
+        <button onclick="goToPayment()">Proceder al Pago</button>
+    </section>
+
+    <script>
+        function goToPayment() {
+            // Aquí podrías redirigir al usuario a la página de pagos
+            window.location.href = 'pagosPortal.html';
+        }
+
+        function displayMembershipSummary() {
+            const membershipType = localStorage.getItem('selectedMembership');
+            const price = localStorage.getItem('membershipPrice');
+
+            if (membershipType && price) {
+                let details = '';
+                switch (membershipType) {
+                    case 'Básica':
+                        details = 'Acceso a cursos básicos, soporte técnico limitado, y acceso a foros de discusión.';
+                        break;
+                    case 'Premium':
+                        details = 'Acceso a todos los cursos, soporte técnico prioritario, acceso a materiales de estudio avanzados y certificados de finalización.';
+                        break;
+                    case 'Corporativa':
+                        details = 'Acceso a todos los cursos y seminarios en vivo, soporte técnico 24/7, acceso a materiales exclusivos, consultoría personalizada y certificados de finalización.';
+                        break;
+                    default:
+                        details = 'Detalles no disponibles.';
+                }
+
+                document.getElementById("summaryMessage").innerHTML = `Usted ha elegido la <strong>${membershipType}</strong> por <strong>$${price}/mes</strong>. <br/> Detalles: ${details}`;
+            }
+        }
+
+        // Llama a la función para mostrar el resumen al cargar la página
+        window.onload = displayMembershipSummary;
+    </script>
+</body>
+</html>
+
+
+
+    
+    

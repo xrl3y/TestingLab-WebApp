@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    display: flex;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo del menú a la izquierda */
+.menu {
+    width: 200px;
+    background-color: #37B7C3;
+    padding: 20px;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu a {
+    color: white;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #37B7C3;
+}
+
+/* Estilo del contenido */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.video-container {
+    text-align: center;
+}
+
+video {
+    width: 80%;
+    max-width: 1400px;
+    height: auto;
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+.video-js .vjs-control-bar {
+    background-color: #333;
+}
+.video-js .vjs-play-control {
+color: #fff;
+}
